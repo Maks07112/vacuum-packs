@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Вакуумні пакети — Набір 10шт + насос | 660₴</title>
+<title>Вакуумні пакети — Набір 10шт + насос | 660 ₴</title>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function sendToTelegram(name, phone, pkg, price) {
   var TOKEN = '8702959556:AAGtl6WHbyay6FKXjl_0reWp8aMUbCVVdHM';
   var CHAT_ID = '-5074366845';
-  var text = '\u{1F6D2} <b>Нова заявка!</b>\n\n\u{1F4E6} Пакет: ' + pkg + '\n\u{1F4B0} Ціна: ' + price + '₴\n\u{1F464} Ім\'я: ' + name + '\n\u{1F4DE} Телефон: ' + phone;
+  var text = '\u{1F6D2} <b>Нова заявка!</b>\n\n\u{1F4E6} Пакет: ' + pkg + '\n\u{1F4B0} Ціна: ' + price + ' ₴\n\u{1F464} Ім\'я: ' + name + '\n\u{1F4DE} Телефон: ' + phone;
   fetch('https://api.telegram.org/bot' + TOKEN + '/sendMessage', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -251,12 +251,12 @@ window.selectPkg = function(el) {
   const sub   = el.dataset.sub;
   
   document.querySelector('.order .section-title').textContent = 
-    'Замовити за ' + price + '₴';
+    'Замовити за ' + price + ' ₴';
   document.querySelector('.order-price').innerHTML = 
-    price + '<span>₴</span>';
+    price + '<span> ₴</span>';
   document.querySelector('.order-sub').textContent = sub;
   document.querySelector('.btn-order').textContent = 
-    'Замовити за ' + price + '₴ →';
+    'Замовити за ' + price + ' ₴ →';
     
   // Swap hero image with fade
   const heroImg = document.querySelector('.hero-img-wrap img');
@@ -275,7 +275,7 @@ window.selectPkg = function(el) {
   }
   // Update hero form title
   const heroTitle = document.querySelector('.hero-form-title');
-  if (heroTitle) heroTitle.textContent = 'Замовити за ' + price + '₴ — доставка по всій Україні';
+  if (heroTitle) heroTitle.textContent = 'Замовити за ' + price + ' ₴ — доставка по всій Україні';
   // Update float btn
   const fb = document.getElementById('floatBtn');
   if (fb) {
@@ -284,7 +284,7 @@ window.selectPkg = function(el) {
   }
   // Update price display
   const pd = document.querySelector('.price-big');
-  if (pd) pd.innerHTML = price + '<span>₴</span>';
+  if (pd) pd.innerHTML = price + '<span> ₴</span>';
 };
 
 // FORM SUBMIT
@@ -414,12 +414,12 @@ document.addEventListener('keydown', e => {
     <p class="hero-sub">Економія місця до 80%. Захист від пилу, вологи та комах. Ідеально для дому, дачі та подорожей.</p>
 
     <div class="price-row">
-      <div class="price-big">799<span>₴</span></div>
+      <div class="price-big">799<span> ₴</span></div>
       <div class="price-note"><b>🎁 Насос у комплекті!</b></div>
     </div>
 
     <div class="hero-form">
-      <div class="hero-form-title">Замовити за 799₴ — доставка по всій Україні</div>
+      <div class="hero-form-title">Замовити за 799 ₴ — доставка по всій Україні</div>
       <div class="form-row">
         <input class="inp" type="text" placeholder="Ваше ім'я" id="heroName">
         <input class="inp" type="tel" placeholder="+380 ___ __ __" id="heroPhone">
@@ -479,7 +479,7 @@ document.addEventListener('keydown', e => {
 <!-- TIMER -->
 <div class="timer-bar">
   <div class="timer-inner">
-    <span class="timer-label">⚡ Ціна 799₴ діє ще:</span>
+    <span class="timer-label">⚡ Ціна 799 ₴ діє ще:</span>
     <div class="timer-digits">
       <div class="tblock"><div class="num" id="th">02</div><div class="lbl">год</div></div>
       <span class="tsep">:</span>
@@ -708,9 +708,9 @@ document.addEventListener('keydown', e => {
 <!-- ORDER -->
 <section class="order" id="order">
   <div class="section-label">Замовлення</div>
-  <h2 class="section-title" style="margin-bottom:28px;max-width:none;text-align:center">Замовити за 799₴</h2>
+  <h2 class="section-title" style="margin-bottom:28px;max-width:none;text-align:center">Замовити за 799 ₴</h2>
   <div class="order-card fade-up">
-    <div class="order-price">799<span>₴</span></div>
+    <div class="order-price">799<span> ₴</span></div>
     <div class="order-sub">12 пакетів (4 розміри) + ручний насос · Доставка по Україні</div>
     <div class="order-form">
       <div class="form-row">
