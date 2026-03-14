@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вакуумні пакети — Набір 10шт + насос | 660₴</title>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal:#1ab5b5; --teal-dark:#0e8a8a; --teal-light:#e0f7f7;
+  --navy:#1a2d3d; --white:#fff; --off:#f4fafa; --gray:#6b8a9a;
+  --accent:#ff6b35; --green:#1a8a60;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',sans-serif;background:var(--white);color:var(--navy);overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:14px 5%;background:rgba(255,255,255,0.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(26,181,181,0.15)}
+.logo{font-family:'Unbounded',sans-serif;font-size:1rem;font-weight:900;color:var(--teal-dark)}
+.logo span{color:var(--navy)}
+.nav-social{display:flex;align-items:center;gap:8px;font-size:0.78rem;font-weight:600;color:var(--navy)}
+.nav-stars{color:#f5a623;letter-spacing:-1px}
+.nav-social span{color:var(--gray)}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:start;padding:100px 5% 50px;background:linear-gradient(135deg,#f0fafa 0%,#e8f8f8 40%,#fff 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-100px;right:-80px;width:550px;height:550px;border-radius:50%;background:radial-gradient(circle,rgba(26,181,181,0.1) 0%,transparent 70%)}
+.hero-text{position:relative;z-index:2}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--teal-light);color:var(--teal-dark);font-size:0.72rem;font-weight:700;padding:6px 14px;border-radius:100px;margin-bottom:18px;text-transform:uppercase;letter-spacing:.5px}
+.hero-tag::before{content:'●';font-size:.45rem;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+h1{font-family:'Unbounded',sans-serif;font-size:clamp(1.8rem,3.5vw,3rem);font-weight:900;line-height:1.1;margin-bottom:16px;color:var(--navy)}
+h1 em{font-style:normal;color:var(--teal)}
+.hero-sub{font-size:.95rem;line-height:1.65;color:var(--gray);margin-bottom:24px;max-width:460px}
+
+.price-row{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+.price-big{font-family:'Unbounded',sans-serif;font-size:2.6rem;font-weight:900;color:var(--navy)}
+.price-big span{color:var(--teal)}
+.price-note{font-size:.78rem;color:var(--gray);line-height:1.5}
+.price-note b{color:var(--accent);display:block;font-size:.82rem}
+
+/* HERO FORM */
+.hero-form{background:white;border-radius:20px;padding:24px;box-shadow:0 10px 40px rgba(26,181,181,0.15);border:1px solid rgba(26,181,181,0.2);margin-bottom:20px}
+.hero-form-title{font-family:'Unbounded',sans-serif;font-size:.85rem;font-weight:700;margin-bottom:14px;color:var(--navy)}
+.form-row{display:flex;gap:10px;flex-wrap:wrap}
+.inp{flex:1;min-width:140px;padding:13px 16px;border:1.5px solid rgba(26,181,181,0.25);border-radius:12px;font-family:'Manrope',sans-serif;font-size:.88rem;outline:none;transition:border-color .2s;background:#fafefe}
+.inp:focus{border-color:var(--teal)}
+.inp::placeholder{color:#aac}
+.btn-main{background:var(--accent);color:white;font-family:'Unbounded',sans-serif;font-size:.8rem;font-weight:700;padding:13px 20px;border-radius:12px;border:none;cursor:pointer;white-space:nowrap;transition:transform .2s,box-shadow .2s;box-shadow:0 6px 20px rgba(255,107,53,.35)}
+.btn-main:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(255,107,53,.45)}
+.form-note{font-size:.72rem;color:var(--gray);margin-top:8px}
+
+.hero-badges{display:flex;gap:12px;flex-wrap:wrap}
+.hbadge{display:flex;align-items:center;gap:6px;font-size:.75rem;color:var(--gray);font-weight:500}
+.hbadge svg{color:var(--teal)}
+
+.hero-visual{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:20px;padding-top:24px}
+.hero-img-wrap{position:relative;animation:float 5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.hero-img-wrap img{width:100%;max-width:540px;border-radius:24px;filter:drop-shadow(0 20px 50px rgba(26,181,181,.2))}
+.badge-save{position:absolute;top:-8px;right:8px;background:var(--accent);color:white;font-family:'Unbounded',sans-serif;font-size:.72rem;font-weight:700;padding:10px 14px;border-radius:14px;transform:rotate(6deg);box-shadow:0 6px 20px rgba(255,107,53,.4);text-align:center;line-height:1.3}
+
+/* PACKAGE SELECTOR */
+.pkg-selector{width:100%;max-width:540px;display:flex;flex-direction:column;gap:10px}
+.pkg-title{font-family:'Unbounded',sans-serif;font-size:.72rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px}
+.pkg-option{display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:16px;border:2px solid rgba(26,181,181,.18);background:white;cursor:pointer;transition:all .2s;position:relative}
+.pkg-option:hover{border-color:var(--teal);background:var(--teal-light)}
+.pkg-option.selected{border-color:var(--teal);background:var(--teal-light);box-shadow:0 4px 16px rgba(26,181,181,.2)}
+.pkg-option.selected.best{border-color:var(--accent);background:#fff5f0;box-shadow:0 4px 16px rgba(255,107,53,.18)}
+.pkg-radio{width:18px;height:18px;border-radius:50%;border:2px solid rgba(26,181,181,.4);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.pkg-option.selected .pkg-radio{background:var(--teal);border-color:var(--teal)}
+.pkg-option.selected.best .pkg-radio{background:var(--accent);border-color:var(--accent)}
+.pkg-radio::after{content:'';width:7px;height:7px;border-radius:50%;background:white;display:none}
+.pkg-option.selected .pkg-radio::after{display:block}
+.pkg-info{flex:1}
+.pkg-name{font-family:'Unbounded',sans-serif;font-size:.82rem;font-weight:700;color:var(--navy)}
+.pkg-desc{font-size:.73rem;color:var(--gray);margin-top:2px}
+.pkg-price{font-family:'Unbounded',sans-serif;font-size:1.1rem;font-weight:900;color:var(--teal-dark)}
+.pkg-option.selected.best .pkg-price{color:var(--accent)}
+.pkg-badge{position:absolute;top:-10px;right:14px;background:var(--accent);color:white;font-family:'Unbounded',sans-serif;font-size:.62rem;font-weight:700;padding:3px 10px;border-radius:100px}
+
+/* TIMER */
+.timer-bar{background:var(--navy);padding:16px 5%;text-align:center}
+.timer-inner{display:inline-flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center}
+.timer-label{color:rgba(255,255,255,.75);font-size:.82rem}
+.timer-digits{display:flex;gap:8px;align-items:center}
+.tblock{background:rgba(26,181,181,.2);border-radius:8px;padding:6px 12px;text-align:center}
+.tblock .num{font-family:'Unbounded',sans-serif;font-size:1.2rem;font-weight:900;color:var(--teal);line-height:1}
+.tblock .lbl{font-size:.6rem;color:rgba(255,255,255,.5);margin-top:2px}
+.tsep{color:var(--teal);font-size:1.2rem;font-weight:900}
+
+/* BEFORE/AFTER */
+.ba-section{padding:70px 5%;background:var(--white)}
+.ba-section .section-label{margin-bottom:8px}
+.ba-section .section-title{margin-bottom:36px}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:800px}
+.ba-card{border-radius:20px;overflow:hidden;position:relative}
+.ba-card img{width:100%;display:block;border-radius:20px}
+.ba-label{position:absolute;top:14px;left:14px;font-family:'Unbounded',sans-serif;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:100px}
+.ba-label.before{background:rgba(255,107,53,.9);color:white}
+.ba-label.after{background:rgba(26,181,181,.9);color:white}
+.ba-caption{text-align:center;margin-top:10px;font-size:.82rem;color:var(--gray);font-weight:500}
+.ba-result{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-dark) 100%);border-radius:20px;padding:28px 32px;display:flex;align-items:center;gap:20px;margin-top:20px;max-width:800px}
+.ba-result-num{font-family:'Unbounded',sans-serif;font-size:3rem;font-weight:900;color:white;line-height:1}
+.ba-result-text{color:rgba(255,255,255,.9);font-size:.9rem;line-height:1.5}
+.ba-result-text b{color:white;font-size:1rem}
+
+/* SOCIAL PROOF / REVIEWS */
+.reviews{padding:70px 5%;background:var(--off)}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:36px}
+.review-card{background:white;border-radius:20px;padding:24px;border:1px solid rgba(26,181,181,.1);transition:transform .2s,box-shadow .2s}
+.review-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(26,181,181,.12)}
+.review-stars{color:#f5a623;font-size:1rem;margin-bottom:10px}
+.review-text{font-size:.87rem;color:var(--navy);line-height:1.65;margin-bottom:14px}
+.review-author{display:flex;align-items:center;gap:10px}
+.review-avatar{width:36px;height:36px;border-radius:50%;background:var(--teal-light);display:flex;align-items:center;justify-content:center;font-family:'Unbounded',sans-serif;font-size:.75rem;font-weight:700;color:var(--teal-dark)}
+.review-name{font-size:.82rem;font-weight:700;color:var(--navy)}
+.review-date{font-size:.72rem;color:var(--gray)}
+.review-badge{display:inline-flex;align-items:center;gap:6px;background:#e8fff5;color:var(--green);font-size:.72rem;font-weight:600;padding:3px 10px;border-radius:100px;margin-bottom:14px}
+
+/* WHAT'S INCLUDED */
+.kit-section{padding:70px 5%;background:var(--navy);position:relative;overflow:hidden}
+.kit-section::before{content:'';position:absolute;top:-150px;right:-150px;width:450px;height:450px;border-radius:50%;background:radial-gradient(circle,rgba(26,181,181,.15) 0%,transparent 70%)}
+.kit-section .section-title{color:white;margin-bottom:36px}
+.kit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;position:relative;z-index:1}
+.kit-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:24px 20px;text-align:center;transition:background .3s}
+.kit-card:hover{background:rgba(26,181,181,.15)}
+.kit-size{font-family:'Unbounded',sans-serif;font-size:1.1rem;font-weight:900;color:var(--teal);margin-bottom:6px}
+.kit-use{font-size:.78rem;color:rgba(255,255,255,.6);margin-bottom:12px;line-height:1.5}
+.kit-qty-badge{background:rgba(26,181,181,.25);color:var(--teal);font-size:.75rem;font-weight:700;padding:4px 12px;border-radius:100px;display:inline-block}
+.kit-pump{background:linear-gradient(135deg,rgba(255,107,53,.2),rgba(255,107,53,.1));border-color:rgba(255,107,53,.3)}
+.kit-pump .kit-size{color:var(--accent)}
+.kit-pump .kit-qty-badge{background:rgba(255,107,53,.2);color:var(--accent)}
+
+/* HOW TO */
+.howto{padding:70px 5%;background:var(--off)}
+.howto-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
+.step-card{background:white;border-radius:20px;padding:24px;border:1px solid rgba(26,181,181,.1);display:flex;gap:16px;align-items:flex-start;transition:transform .2s}
+.step-card:hover{transform:translateY(-4px)}
+.step-img{width:90px;height:90px;border-radius:14px;object-fit:cover;flex-shrink:0}
+.step-content{}
+.step-num{font-family:'Unbounded',sans-serif;font-size:.65rem;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.step-title{font-family:'Unbounded',sans-serif;font-size:.88rem;font-weight:700;color:var(--navy);margin-bottom:6px}
+.step-desc{font-size:.8rem;color:var(--gray);line-height:1.6}
+
+/* GUARANTEE */
+.guarantee{padding:50px 5%;background:var(--white)}
+.guarantee-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.guar-card{display:flex;align-items:flex-start;gap:14px;padding:20px;background:var(--off);border-radius:16px}
+.guar-icon{font-size:1.8rem;flex-shrink:0}
+.guar-title{font-family:'Unbounded',sans-serif;font-size:.82rem;font-weight:700;color:var(--navy);margin-bottom:4px}
+.guar-desc{font-size:.78rem;color:var(--gray);line-height:1.5}
+
+/* GALLERY */
+.gallery-section{padding:60px 5%;background:var(--off)}
+.gallery-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:24px;flex-wrap:wrap;gap:12px}
+.gallery-track-wrap{overflow:hidden;border-radius:16px}
+.gallery-track{display:flex;gap:14px;transition:transform .4s cubic-bezier(.4,0,.2,1)}
+.gallery-slide{flex:0 0 calc(33.333% - 10px);border-radius:14px;overflow:hidden;aspect-ratio:1/1;cursor:pointer}
+.gallery-slide img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gallery-slide:hover img{transform:scale(1.05)}
+.gallery-controls{display:flex;gap:10px;align-items:center}
+.gctrl{width:40px;height:40px;border-radius:50%;border:2px solid var(--teal);background:white;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--teal);transition:all .2s}
+.gctrl:hover{background:var(--teal);color:white}
+.gallery-dots{display:flex;gap:6px;align-items:center}
+.gdot{width:7px;height:7px;border-radius:50%;background:rgba(26,181,181,.25);cursor:pointer;transition:all .2s}
+.gdot.active{background:var(--teal);width:20px;border-radius:4px}
+
+/* LIGHTBOX */
+.lightbox{display:none;position:fixed;inset:0;z-index:999;background:rgba(10,20,30,.93);backdrop-filter:blur(10px);align-items:center;justify-content:center}
+.lightbox.open{display:flex}
+.lightbox img{max-width:88vw;max-height:88vh;border-radius:16px;object-fit:contain}
+.lb-close{position:absolute;top:24px;right:28px;color:white;font-size:2rem;cursor:pointer;background:none;border:none;opacity:.7;transition:opacity .2s}
+.lb-close:hover{opacity:1}
+.lb-prev,.lb-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:none;color:white;font-size:2rem;cursor:pointer;padding:12px 16px;border-radius:10px;transition:background .2s}
+.lb-prev:hover,.lb-next:hover{background:rgba(26,181,181,.4)}
+.lb-prev{left:16px}.lb-next{right:16px}
+
+/* ORDER */
+.order{padding:70px 5%;background:linear-gradient(135deg,#f0fafa,#e8f8f8);text-align:center}
+.order-card{display:inline-block;background:white;border-radius:28px;padding:44px 52px;border:2px solid rgba(26,181,181,.15);box-shadow:0 20px 60px rgba(26,181,181,.12);max-width:560px;width:100%}
+.order-price{font-family:'Unbounded',sans-serif;font-size:3.2rem;font-weight:900;color:var(--navy);margin-bottom:6px}
+.order-price span{color:var(--teal)}
+.order-sub{color:var(--gray);font-size:.88rem;margin-bottom:28px}
+.order-form .form-row{flex-direction:column;gap:12px}
+.order-form .inp{width:100%;border-radius:14px;padding:15px 18px;font-size:.92rem}
+.btn-order{width:100%;background:var(--accent);color:white;font-family:'Unbounded',sans-serif;font-size:.9rem;font-weight:700;padding:17px;border-radius:14px;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s;box-shadow:0 8px 24px rgba(255,107,53,.35);margin-top:4px}
+.btn-order:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(255,107,53,.45)}
+.order-perks{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.perk{display:flex;align-items:center;gap:6px;font-size:.78rem;color:var(--gray);font-weight:500}
+.perk svg{color:var(--teal)}
+.stock-badge{display:inline-flex;align-items:center;gap:7px;background:#e8fff5;color:var(--green);font-size:.76rem;font-weight:700;padding:7px 16px;border-radius:100px;margin-top:16px}
+/*.stock-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}*/
+
+/* FLOATING BTN */
+.float-btn{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:300;display:flex;align-items:center;gap:10px;background:var(--accent);color:white;font-family:'Unbounded',sans-serif;font-size:.85rem;font-weight:700;padding:16px 36px;border-radius:100px;box-shadow:0 8px 32px rgba(255,107,53,.45);text-decoration:none;transition:transform .2s,box-shadow .2s;white-space:nowrap;border:none;cursor:pointer}
+.float-btn:hover{transform:translateX(-50%) translateY(-3px);box-shadow:0 14px 40px rgba(255,107,53,.55)}
+.float-btn-pulse{position:absolute;inset:0;border-radius:100px;background:var(--accent);animation:floatPulse 2.5s ease-out infinite;z-index:-1}
+@keyframes floatPulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.25);opacity:0}}
+.float-btn.hidden{opacity:0;pointer-events:none;transform:translateX(-50%) translateY(20px)}
+
+/* SECTION HELPERS */
+.section-label{font-family:'Unbounded',sans-serif;font-size:.68rem;font-weight:700;color:var(--teal);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+.section-title{font-family:'Unbounded',sans-serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:900;line-height:1.15;color:var(--navy);max-width:480px}
+
+footer{background:var(--navy);color:rgba(255,255,255,.45);text-align:center;padding:24px 5%;font-size:.76rem}
+footer a{color:var(--teal);text-decoration:none}
+
+/* SUCCESS */
+.success-msg{display:none;background:#e8fff5;border:1.5px solid #a0e8c8;border-radius:14px;padding:18px;text-align:center;color:var(--green);font-weight:600;font-size:.9rem;margin-top:8px}
+.success-msg.show{display:block}
+
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr;padding-top:80px}
+  .hero-visual{order:-1;margin-bottom:24px}
+  .hero-img-wrap img{max-width:300px}
+  .pkg-selector{max-width:100%}
+  .ba-grid{grid-template-columns:1fr}
+  .howto-grid{grid-template-columns:1fr}
+  .gallery-slide{flex:0 0 calc(85% - 7px)}
+  .order-card{padding:32px 24px}
+  .float-btn{padding:14px 28px;font-size:.8rem;bottom:16px}
+}
+
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+// TELEGRAM
+function sendToTelegram(name, phone, pkg, price) {
+  var TOKEN = '8702959556:AAGtl6WHbyay6FKXjl_0reWp8aMUbCVVdHM';
+  var CHAT_ID = '-5074366845';
+  var text = '\u{1F6D2} <b>Нова заявка!</b>\n\n\u{1F4E6} Пакет: ' + pkg + '\n\u{1F4B0} Ціна: ' + price + '₴\n\u{1F464} Ім\'я: ' + name + '\n\u{1F4DE} Телефон: ' + phone;
+  fetch('https://api.telegram.org/bot' + TOKEN + '/sendMessage', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ chat_id: CHAT_ID, text: text, parse_mode: 'HTML' })
+  });
+}
+
+
+// PACKAGE SELECTOR
+window.selectPkg = function(el) {
+  document.querySelectorAll('.pkg-option').forEach(o => o.classList.remove('selected','best'));
+  el.classList.add('selected');
+  if (el.dataset.label && el.dataset.label.includes('12шт')) el.classList.add('best');
+  const price = el.dataset.price;
+  const sub   = el.dataset.sub;
+  
+  document.querySelector('.order .section-title').textContent = 
+    'Замовити за ' + price + '₴';
+  document.querySelector('.order-price').innerHTML = 
+    price + '<span>₴</span>';
+  document.querySelector('.order-sub').textContent = sub;
+  document.querySelector('.btn-order').textContent = 
+    'Замовити за ' + price + '₴ →';
+    
+  // Swap hero image with fade
+  const heroImg = document.querySelector('.hero-img-wrap img');
+  if (heroImg && el.dataset.img) {
+    heroImg.style.transition = 'opacity 0.3s ease';
+    heroImg.style.opacity = '0';
+    setTimeout(() => {
+      heroImg.src = el.dataset.img;
+      heroImg.style.opacity = '1';
+    }, 300);
+    
+    // Оновлення заголовка h1
+  const qty = el.getAttribute('data-qty');
+  document.querySelector('.hero-text h1').innerHTML = 
+    'Вакуумні<br><em>пакети</em><br>' + qty + ' шт + насос';
+  }
+  // Update hero form title
+  const heroTitle = document.querySelector('.hero-form-title');
+  if (heroTitle) heroTitle.textContent = 'Замовити за ' + price + '₴ — доставка по всій Україні';
+  // Update float btn
+  const fb = document.getElementById('floatBtn');
+  if (fb) {
+    const txt = fb.querySelector('.float-btn-text');
+    if (txt) txt.textContent = 'Замовити за ' + price + '₴';
+  }
+  // Update price display
+  const pd = document.querySelector('.price-big');
+  if (pd) pd.innerHTML = price + '<span>₴</span>';
+};
+
+// FORM SUBMIT
+window.submitForm = function(nameId, phoneId, successId) {
+  const name = document.getElementById(nameId).value.trim();
+  const phone = document.getElementById(phoneId).value.trim();
+  if (!name || phone.length < 10) {
+    alert('Будь ласка, заповніть ім\'я та номер телефону');
+    return;
+  }
+  var selected = document.querySelector('.pkg-option.selected');
+  var pkg = selected ? selected.querySelector('.pkg-name').textContent : 'Не обрано';
+  var price = selected ? selected.dataset.price : '—';
+  sendToTelegram(name, phone, pkg, price);
+  document.getElementById(successId).classList.add('show');
+  document.getElementById(nameId).value = '';
+  document.getElementById(phoneId).value = '';
+};
+
+// SCROLL TO ORDER
+window.scrollToOrder = function() {
+  document.getElementById('order').scrollIntoView({behavior:'smooth'});
+};
+
+// FLOATING BTN — hide when order section visible
+const orderSection = document.getElementById('order');
+const floatBtn = document.getElementById('floatBtn');
+const floatObs = new IntersectionObserver(entries => {
+  floatBtn.classList.toggle('hidden', entries[0].isIntersecting);
+}, {threshold: 0.3});
+floatObs.observe(orderSection);
+// also hide near hero form
+const heroForm = document.querySelector('.hero-form');
+const heroObs = new IntersectionObserver(entries => {
+  if(entries[0].isIntersecting) floatBtn.classList.add('hidden');
+  else floatBtn.classList.remove('hidden');
+}, {threshold: 0.5});
+heroObs.observe(heroForm);
+
+// COUNTDOWN TIMER
+function startTimer(h, m, s) {
+  let total = h*3600 + m*60 + s;
+  const th = document.getElementById('th');
+  const tm = document.getElementById('tm');
+  const ts = document.getElementById('ts');
+  setInterval(() => {
+    if(total <= 0) return;
+    total--;
+    const hh = Math.floor(total/3600);
+    const mm = Math.floor((total%3600)/60);
+    const ss = total%60;
+    th.textContent = String(hh).padStart(2,'0');
+    tm.textContent = String(mm).padStart(2,'0');
+    ts.textContent = String(ss).padStart(2,'0');
+  }, 1000);
+}
+startTimer(2,47,0);
+
+// FADE UP
+const fadeObs = new IntersectionObserver(entries => {
+  entries.forEach((e,i) => {
+    if(e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i*80);
+  });
+}, {threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el => fadeObs.observe(el));
+
+// GALLERY
+const track = document.getElementById('gTrack');
+const slides = track.querySelectorAll('.gallery-slide');
+const dotsWrap = document.getElementById('gDots');
+let cur = 0;
+const pv = () => window.innerWidth <= 768 ? 1 : 3;
+const maxI = () => slides.length - pv();
+
+for(let i=0; i<=slides.length-3; i++) {
+  const d = document.createElement('div');
+  d.className = 'gdot' + (i===0?' active':'');
+  d.onclick = () => goTo(i);
+  dotsWrap.appendChild(d);
+}
+
+function goTo(idx) {
+  cur = Math.max(0, Math.min(idx, maxI()));
+  track.style.transform = 'translateX(-' + (cur*(slides[0].offsetWidth+14)) + 'px)';
+  dotsWrap.querySelectorAll('.gdot').forEach((d,i) => d.classList.toggle('active', i===cur));
+}
+document.getElementById('gPrev').onclick = () => goTo(cur-1);
+document.getElementById('gNext').onclick = () => goTo(cur+1);
+window.addEventListener('resize', () => goTo(0));
+
+// LIGHTBOX
+const lbSrcs = Array.from(slides).map(s => s.querySelector('img').src);
+let lbI = 0;
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+window.openLb = i => { lbI=i; lbImg.src=lbSrcs[i]; lb.classList.add('open'); document.body.style.overflow='hidden'; };
+window.closeLb = () => { lb.classList.remove('open'); document.body.style.overflow=''; };
+window.lbStep = d => { lbI=(lbI+d+lbSrcs.length)%lbSrcs.length; lbImg.src=lbSrcs[lbI]; };
+lb.addEventListener('click', e => { if(e.target===lb) closeLb(); });
+document.addEventListener('keydown', e => {
+  if(!lb.classList.contains('open')) return;
+  if(e.key==='Escape') closeLb();
+  if(e.key==='ArrowRight') lbStep(1);
+  if(e.key==='ArrowLeft') lbStep(-1);
+});
+
+
+}); // end DOMContentLoaded
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Vacuum<span>Packs</span></div>
+  <div class="nav-social">
+    <span class="nav-stars">★★★★★</span>
+    <span>4.9 · <b>127 замовлень</b></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-tag">🔥 Хіт продажів</div>
+    <h1>Вакуумні<br><em>пакети</em><br>12 шт + насос</h1>
+    <p class="hero-sub">Економія місця до 80%. Захист від пилу, вологи та комах. Ідеально для дому, дачі та подорожей.</p>
+
+    <div class="price-row">
+      <div class="price-big">799<span>₴</span></div>
+      <div class="price-note"><b>🎁 Насос у комплекті!</b></div>
+    </div>
+
+    <div class="hero-form">
+      <div class="hero-form-title">Замовити за 799₴ — доставка по всій Україні</div>
+      <div class="form-row">
+        <input class="inp" type="text" placeholder="Ваше ім'я" id="heroName">
+        <input class="inp" type="tel" placeholder="+380 ___ __ __" id="heroPhone">
+        <button class="btn-main" onclick="submitForm('heroName','heroPhone','heroSuccess')">Замовити →</button>
+      </div>
+      <div class="form-note">📞 Передзвонимо протягом 15 хвилин</div>
+      <div class="success-msg" id="heroSuccess">✅ Дякуємо! Ми зателефонуємо вам найближчим часом.</div>
+    </div>
+
+    <div class="hero-badges">
+      <div class="hbadge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Оплата при отриманні</div>
+      <div class="hbadge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Гарантія якості</div>
+      <div class="hbadge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Нова Пошта</div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-img-wrap">
+      <img src="img/img01.webp" alt="Вакуумні пакети набір 10шт з насосом">
+      <div class="badge-save">-80%<br>місця</div>
+    </div>
+
+    <div class="pkg-selector">
+      <div class="pkg-title">Оберіть комплект:</div>
+
+      <div class="pkg-option" data-price="399" data-qty="6" data-img="img/img02.webp" onclick="selectPkg(this)">
+        <div class="pkg-radio"></div>
+        <div class="pkg-info">
+          <div class="pkg-name">Вакуумні пакети 6 шт</div>
+          <div class="pkg-desc">2шт 40×60 · 2шт 50×70 · 2шт 60×80 + насос</div>
+        </div>
+        <div class="pkg-price">399 ₴</div>
+      </div>
+
+      <div class="pkg-option selected best" data-price="799" data-qty="12" data-img="img/img03.webp" onclick="selectPkg(this)">
+        <div class="pkg-badge">🔥 Хіт</div>
+        <div class="pkg-radio"></div>
+        <div class="pkg-info">
+          <div class="pkg-name">Вакуумні пакети 12 шт</div>
+          <div class="pkg-desc">3шт 40×60 · 3шт 50×70 · 3шт 60×80 · 3шт 80×100 + насос</div>
+        </div>
+        <div class="pkg-price">799 ₴</div>
+      </div>
+
+      <div class="pkg-option" data-price="999" data-qty="16" data-img="img/img04.webp" onclick="selectPkg(this)">
+        <div class="pkg-radio"></div>
+        <div class="pkg-info">
+          <div class="pkg-name">Вакуумні пакети 16 шт</div>
+          <div class="pkg-desc">8шт 40×60 · 4шт 50×70 · 2шт 60×80 · 2шт 80×100 + насос</div>
+        </div>
+        <div class="pkg-price">999 ₴</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMER -->
+<div class="timer-bar">
+  <div class="timer-inner">
+    <span class="timer-label">⚡ Ціна 799₴ діє ще:</span>
+    <div class="timer-digits">
+      <div class="tblock"><div class="num" id="th">02</div><div class="lbl">год</div></div>
+      <span class="tsep">:</span>
+      <div class="tblock"><div class="num" id="tm">47</div><div class="lbl">хв</div></div>
+      <span class="tsep">:</span>
+      <div class="tblock"><div class="num" id="ts">00</div><div class="lbl">сек</div></div>
+    </div>
+    <!--<span class="timer-label" style="color:rgba(26,181,181,.8)">· В наявності: 52 шт</span>-->
+  </div>
+</div>
+
+<!-- BEFORE / AFTER -->
+<section class="ba-section">
+  <div class="section-label">Результат</div>
+  <h2 class="section-title" style="margin-bottom:36px">До і після —<br>різниця очевидна</h2>
+  <div class="ba-grid fade-up">
+    <div>
+      <div class="ba-card">
+        <img src="img/img05.webp" alt="До вакуумування">
+        <span class="ba-label before">До</span>
+      </div>
+      <div class="ba-caption">Компактно та акуратно</div>
+    </div>
+    <div>
+      <div class="ba-card">
+        <img src="img/img06.webp" alt="Після вакуумування">
+        <span class="ba-label after">Після</span>
+      </div>
+      <div class="ba-caption">Швидко та легко</div>
+    </div>
+  </div>
+  <div class="ba-result fade-up">
+    <div class="ba-result-num">80%</div>
+    <div class="ba-result-text"><b>Економія місця в шафі, валізі та на антресолях</b><br>Речі займають у 3–5 разів менше місця. Більше простору — більше порядку.</div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="section-label">Відгуки</div>
+  <h2 class="section-title">Що кажуть покупці?</h2>
+  <div class="reviews-grid">
+    <div class="review-card fade-up">
+      <div class="review-badge">✅ Підтверджена покупка</div>
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Замовила для зберігання зимових речей. Пакети щільні, замок зіп закривається чудово. Ковдра, яка займала половину шафи, тепер плоска як млинець 😄 Насос зручний, не потрібен пилосос. Рекомендую!</p>
+      <div class="review-author">
+        <div class="review-avatar">ОМ</div>
+        <div><div class="review-name">Оксана М.</div><div class="review-date">Київ · 12 лютого 2025</div></div>
+      </div>
+    </div>
+    <div class="review-card fade-up">
+      <div class="review-badge">✅ Підтверджена покупка</div>
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Брав для переїзду — речей було дуже багато. Завдяки пакетам все вмістилося в значно меншу кількість коробок. Матеріал міцний, не рвався навіть при максимальному стисненні. Набір із 16 штук — дуже вигідно за ціною.</p>
+      <div class="review-author">
+        <div class="review-avatar">ВК</div>
+        <div><div class="review-name">Василь К.</div><div class="review-date">Львів · 3 березня 2025</div></div>
+      </div>
+    </div>
+    <div class="review-card fade-up">
+      <div class="review-badge">✅ Підтверджена покупка</div>
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Вже третій раз замовляю, даю в подарунок подругам. Чудово підходять для подорожей — в валізу вміщується вдвічі більше одягу. Прозорі, тому одразу видно що всередині. Клапан не пропускає повітря назад — дуже якісно зроблено.</p>
+      <div class="review-author">
+        <div class="review-avatar">НП</div>
+        <div><div class="review-name">Наталія П.</div><div class="review-date">Одеса · 27 березня 2025</div></div>
+      </div>
+    </div>
+    <div class="review-card fade-up">
+      <div class="review-badge">✅ Підтверджена покупка</div>
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Купила для дачі — зберігаю постільну білизну та рушники. Цілий рік пролежали, жодного запаху, жодної вологи. Розкрила — наче щойно випрані! Дуже задоволена якістю та розмірами, особливо великий 80×100 — просто шикарний.</p>
+      <div class="review-author">
+        <div class="review-avatar">ІС</div>
+        <div><div class="review-name">Ірина С.</div><div class="review-date">Харків · 5 квітня 2025</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section">
+  <div class="gallery-header">
+    <div>
+      <div class="section-label">Фото товару</div>
+      <h2 class="section-title" style="margin-bottom:0">Товар у деталях</h2>
+    </div>
+    <div class="gallery-controls">
+      <button class="gctrl" id="gPrev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg></button>
+      <div class="gallery-dots" id="gDots"></div>
+      <button class="gctrl" id="gNext"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></button>
+    </div>
+  </div>
+  <div class="gallery-track-wrap">
+    <div class="gallery-track" id="gTrack">
+      <div class="gallery-slide" onclick="openLb(0)"><img src="img/img07.webp" alt="Фото 1"></div>
+      <div class="gallery-slide" onclick="openLb(1)"><img src="img/img08.webp" alt="Фото 2"></div>
+      <div class="gallery-slide" onclick="openLb(2)"><img src="img/img09.webp" alt="Фото 3"></div>
+      <div class="gallery-slide" onclick="openLb(3)"><img src="img/img10.webp" alt="Фото 4"></div>
+      <div class="gallery-slide" onclick="openLb(4)"><img src="img/img11.webp" alt="Фото 5"></div>
+      <div class="gallery-slide" onclick="openLb(5)"><img src="img/img12.webp" alt="Фото 6"></div>
+      <div class="gallery-slide" onclick="openLb(6)"><img src="img/img13.webp" alt="Фото 7"></div>
+      <div class="gallery-slide" onclick="openLb(7)"><img src="img/img14.webp" alt="Фото 8"></div>
+    </div>
+  </div>
+</section>
+
+<!-- KIT -->
+<section class="kit-section">
+  <!--<div class="section-label" style="color:rgba(26,181,181,.8)">Комплект</div>-->
+  <h2 class="section-title" style="color:white;margin-bottom:36px">Що можна покласти в один пакет?</h2>
+  <div class="kit-grid">
+    <div class="kit-card fade-up">
+      <div class="kit-size">40×60 см</div>
+      <div class="kit-use">6–8 светрів або сорочок</div>
+      <!--<span class="kit-qty-badge">3 шт</span>-->
+    </div>
+    <div class="kit-card fade-up">
+      <div class="kit-size">50×70 см</div>
+      <div class="kit-use">10–12 светрів або 1 подушка</div>
+      <!--<span class="kit-qty-badge">3 шт</span>-->
+    </div>
+    <div class="kit-card fade-up">
+      <div class="kit-size">60×80 см</div>
+      <div class="kit-use">10–12 светрів або 1 подушка</div>
+      <!--<span class="kit-qty-badge">2 шт</span>-->
+    </div>
+    <div class="kit-card fade-up">
+      <div class="kit-size">80×100 см</div>
+      <div class="kit-use">4 подушки або 1 комплект постільної</div>
+      <!--<span class="kit-qty-badge">2 шт</span>-->
+    </div>
+    <div class="kit-card kit-pump fade-up">
+      <div class="kit-size">Ручний насос</div>
+      <div class="kit-use">Відкачка за 30 сек. Також підходить будь-який пилосос</div>
+      <!--<span class="kit-qty-badge">1 шт</span>-->
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO -->
+<section class="howto">
+  <div class="section-label">Інструкція</div>
+  <h2 class="section-title">Як користуватись?</h2>
+  <div class="howto-grid">
+    <div class="step-card fade-up">
+      <img class="step-img" src="img/img15.webp" alt="Крок 1">
+      <div class="step-content">
+        <div class="step-num">Крок 01</div>
+        <div class="step-title">Покладіть речі</div>
+        <p class="step-desc">Складіть чисті та сухі речі в пакет. Заповнюйте не більше 2/3 об'єму для кращого стиснення.</p>
+      </div>
+    </div>
+    <div class="step-card fade-up">
+      <img class="step-img" src="img/img16.webp" alt="Крок 2">
+      <div class="step-content">
+        <div class="step-num">Крок 02</div>
+        <div class="step-title">Закрийте застібку</div>
+        <p class="step-desc">Проведіть слайдером по зіп-замку вздовж усього краю пакета до щільного закриття.</p>
+      </div>
+    </div>
+    <div class="step-card fade-up">
+      <img class="step-img" src="img/img17.webp" alt="Крок 3">
+      <div class="step-content">
+        <div class="step-num">Крок 03</div>
+        <div class="step-title">Відкачайте повітря</div>
+        <p class="step-desc">Приєднайте насос або пилосос до клапана. Всього 30 секунд — і пакет стиснутий.</p>
+      </div>
+    </div>
+    <div class="step-card fade-up">
+      <img class="step-img" src="img/img18.webp" alt="Крок 4">
+      <div class="step-content">
+        <div class="step-num">Крок 04</div>
+        <div class="step-title">Готово!</div>
+        <p class="step-desc">Клапан автоматично закривається. Речі захищені від пилу, вологи та комах на роки.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="guarantee">
+  <div class="guarantee-grid">
+    <div class="guar-card fade-up"><div class="guar-icon">🚚</div><div><div class="guar-title">Швидка доставка</div><div class="guar-desc">Нова Пошта. Відправляємо в день замовлення</div></div></div>
+    <div class="guar-card fade-up"><div class="guar-icon">💳</div><div><div class="guar-title">Оплата при отриманні</div><div class="guar-desc">Оплачуйте лише після того, як оглянули замовлення на пошті</div></div></div>
+    <div class="guar-card fade-up"><div class="guar-icon">🛡️</div><div><div class="guar-title">Гарантія якості</div><div class="guar-desc">Щільність 80 мкм — пакети не рвуться і служать роками</div></div></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<!--<section class="gallery-section">
+  <div class="gallery-header">
+    <div>
+      <div class="section-label">Фото товару</div>
+      <h2 class="section-title" style="margin-bottom:0">Товар у деталях</h2>
+    </div>
+    <div class="gallery-controls">
+      <button class="gctrl" id="gPrev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg></button>
+      <div class="gallery-dots" id="gDots"></div>
+      <button class="gctrl" id="gNext"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></button>
+    </div>
+  </div>
+  <div class="gallery-track-wrap">
+    <div class="gallery-track" id="gTrack">
+      <div class="gallery-slide" onclick="openLb(0)"><img src="img/img19.webp" alt="Фото 1"></div>
+      <div class="gallery-slide" onclick="openLb(1)"><img src="img/img20.webp" alt="Фото 2"></div>
+      <div class="gallery-slide" onclick="openLb(2)"><img src="img/img21.webp" alt="Фото 3"></div>
+      <div class="gallery-slide" onclick="openLb(3)"><img src="img/img22.webp" alt="Фото 4"></div>
+      <div class="gallery-slide" onclick="openLb(4)"><img src="img/img23.webp" alt="Фото 5"></div>
+      <div class="gallery-slide" onclick="openLb(5)"><img src="img/img24.webp" alt="Фото 6"></div>
+      <div class="gallery-slide" onclick="openLb(6)"><img src="img/img25.webp" alt="Фото 7"></div>
+      <div class="gallery-slide" onclick="openLb(7)"><img src="img/img26.webp" alt="Фото 8"></div>
+    </div>
+  </div>
+</section>-->
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" onclick="closeLb()">✕</button>
+  <button class="lb-prev" onclick="lbStep(-1)">&#8249;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-next" onclick="lbStep(1)">&#8250;</button>
+</div>
+
+<!-- ORDER -->
+<section class="order" id="order">
+  <div class="section-label">Замовлення</div>
+  <h2 class="section-title" style="margin-bottom:28px;max-width:none;text-align:center">Замовити за 799₴</h2>
+  <div class="order-card fade-up">
+    <div class="order-price">799<span>₴</span></div>
+    <div class="order-sub">12 пакетів (4 розміри) + ручний насос · Доставка по Україні</div>
+    <div class="order-form">
+      <div class="form-row">
+        <input class="inp" type="text" placeholder="Ваше ім'я" id="orderName">
+        <input class="inp" type="tel" placeholder="+380 ___ __ __" id="orderPhone">
+        <button class="btn-order" onclick="submitForm('orderName','orderPhone','orderSuccess')">Замовити за 799₴ →</button>
+      </div>
+      <div class="success-msg" id="orderSuccess">✅ Дякуємо! Ми зателефонуємо вам найближчим часом.</div>
+    </div>
+    <div class="order-perks">
+      <div class="perk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Оплата при отриманні</div>
+      <div class="perk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Гарантія якості</div>
+      <div class="perk"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Відправка в день замовлення</div>
+    </div>
+   <!--<div><div class="stock-badge"><div class="stock-dot"></div></div></div>-->
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 VacuumPacks · SKU: VacuumPacks_8 · Всі права захищені</p>
+  <p style="margin-top:6px">Вакуумні пакети для одягу, постільної білизни та подорожей</p>
+</footer>
+
+<!-- FLOATING BUTTON -->
+<button class="float-btn" id="floatBtn" onclick="scrollToOrder()">
+  <div class="float-btn-pulse"></div>
+  🛒 <span class="float-btn-text">Замовити за 799₴</span>
+</button>
+
+
+</body>
+</html>
